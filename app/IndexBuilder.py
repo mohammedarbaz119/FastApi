@@ -1,6 +1,5 @@
 import pymongo
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
-from llama_index.embeddings.cloudflare_workersai import CloudflareEmbedding
 from llama_index.core import VectorStoreIndex
 from llama_index.core import StorageContext
 from llama_index.core.vector_stores import (
