@@ -6,6 +6,7 @@ passlib[bcrypt]
 sqlmodel
 httpx
 pytest
+python-multipart
 pymupdf
 python-dotenv  
 llama-index 
