@@ -78,15 +78,16 @@ async def ChatEndpoint(socket:WebSocket,filename:str):
                     await socket.send_text("There was no context to answer the Question so model sent an empty response there might be a error in server or pdf doesn't exist on the server")
                 else:    
                     await socket.send_text(chunk)   
-        except Exception as e:
-            await socket.send_text("Too Many Requests") # Thrown when rate limit exceeded.
-            connections.disconnect(sockid=sockid)
-            await socket.close()
-            break
-          # context_key is optional
         except WebSocketDisconnect:
             connections.disconnect(sockid=sockid)
             break
+        except Exception as e:
+            await socket.send_text("Too Many Requests") # Thrown when rate limit exceeded.
+            connections.disconnect(sockid=sockid)
+            await socket.close(reason="too many requests")
+            break
+          # context_key is optional
+        
         
 
 
