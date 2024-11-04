@@ -92,4 +92,3 @@ This command starts the application for production use
 
 server will be running on port 8000
 By following these steps, you will have a properly configured and securely running FastAPI project.
-```
