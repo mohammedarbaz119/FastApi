@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+fastapi-cli
+pyjwt
+passlib[bcrypt]
+sqlmodel
+httpx
+pytest
+pymupdf
+python-dotenv  
+llama-index 
+llama-index-vector-stores-mongodb 
+llama-index-embeddings-google
+fastapi-limiter
+llama-index-storage-chat-store-redis
