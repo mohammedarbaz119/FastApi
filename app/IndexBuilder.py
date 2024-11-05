@@ -31,7 +31,7 @@ storage_context = StorageContext.from_defaults(vector_store=store)
 
 
 index = VectorStoreIndex.from_vector_store(
-store,embed_model=embed_model
+store,embed_model=embed_model,
 )
 
 def buildfilter(filename:str):
