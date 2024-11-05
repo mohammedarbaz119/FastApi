@@ -165,7 +165,7 @@ Initiates a WebSocket connection for real-time chat. This connection supports mu
 
 #### Dependencies and Components
 
-- **Redis**: Manages Rate Limiting for Websockets messages and API
+- **Redis**: Manages Rate Limiting for Websockets messages and APIs and handles chat memory for session based context
 - **ConnectionManager**: Manages active connections, chat engines, and in-memory storage for each session.
 - **RedisChatStore**: Stores chat history in Redis for session based context/persistent storage across.
 - **Chat Engine**: LLM-driven chat engine with custom filters based on the `filename`.
