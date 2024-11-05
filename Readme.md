@@ -1,4 +1,3 @@
-```markdown
 # FastAPI Project Setup Guide
 
 This guide walks you through setting up a FastAPI project, including installing dependencies from `requirements.txt`, configuring environment variables, and running the application in both development and production modes.
