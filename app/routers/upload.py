@@ -42,9 +42,8 @@ async def upload_file(file: UploadFile,user:Annotated[User,Depends(get_current_u
         fileObj = File(filename=file.filename,file_location=file_location,content=texts)
         fileObj.userid = user.id
         session.add(fileObj)
-        if not os.path.exists(file_location):
-            for x in document:
-                index.insert(x)
+        for x in document:
+            index.insert(x)
         print("doc uploading and indexing done")
         session.commit()
         return JSONResponse(content={
@@ -63,7 +62,6 @@ async def getAllFiles(session:SessionDep,page:int,limit:Union[int,None]=1):
     allfiles = []
     for (file,user) in files:
         allfiles.append({"filename":file,"username":user})
-
     return {
         "files":allfiles
     }
